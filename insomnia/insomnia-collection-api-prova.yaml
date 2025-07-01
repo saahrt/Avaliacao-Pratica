@@ -1,0 +1,230 @@
+type: collection.insomnia.rest/5.0
+name: API Prova Pratica
+meta:
+  id: wrk_2e0f48957fa845dc9978a55fc72adb87
+  created: 1751338334504
+  modified: 1751338334504
+collection:
+  - url: http://localhost:3000/tarefas
+    name: criar tarefa
+    meta:
+      id: req_c35877ba062d4385aef76180cc16c403
+      created: 1751338362959
+      modified: 1751340405422
+      isPrivate: false
+      sortKey: -1751338362960
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "titulo": "Tarefa 2",
+          "descricao": "Outra tarefa completa com texto suficiente",
+          "status": true
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tarefas
+    name: listar
+    meta:
+      id: req_afdf9384f8b84192aed83c29d8281f3c
+      created: 1751339578644
+      modified: 1751339639971
+      isPrivate: false
+      sortKey: -1751339578644
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tarefas/1
+    name: buscar tarefa
+    meta:
+      id: req_594dd86e923a41879be7eede24403e70
+      created: 1751339642870
+      modified: 1751339661992
+      isPrivate: false
+      sortKey: -1751339642870
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tarefas/1
+    name: atualizar
+    meta:
+      id: req_692ef9f3e32d4a619eef9aa5402350b9
+      created: 1751339678065
+      modified: 1751339688833
+      isPrivate: false
+      sortKey: -1751339678065
+    method: PUT
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tarefas/1
+    name: deletar
+    meta:
+      id: req_a9e6ef69eb824189a01bf30ded12ce16
+      created: 1751339727815
+      modified: 1751339736790
+      isPrivate: false
+      sortKey: -1751339727815
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tarefas?status=false
+    name: filtro por status pendente
+    meta:
+      id: req_827abd08bbed4612be8551bb05a16426
+      created: 1751340077730
+      modified: 1751340091174
+      isPrivate: false
+      sortKey: -1751340077730
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tarefas?status=true
+    name: filtro por status concluido
+    meta:
+      id: req_fb5a1b5348f242e096f3e1d03e41a362
+      created: 1751340100147
+      modified: 1751340114316
+      isPrivate: false
+      sortKey: -1751339902772.5
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tarefas?ordenarPor=data
+    name: ordenação por data
+    meta:
+      id: req_ad491590882b4d449ecd58e4324a267c
+      created: 1751340131519
+      modified: 1751340150720
+      isPrivate: false
+      sortKey: -1751340131519
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tarefas?ordenarPor=status
+    name: ordenação por status
+    meta:
+      id: req_63f43fab148f4a63a4c35136335df2e6
+      created: 1751340156180
+      modified: 1751340159347
+      isPrivate: false
+      sortKey: -1751340104624.5
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/tarefas?status=false&ordenarPor=data
+    name: teste combinado
+    meta:
+      id: req_dbb434c8a1014e17af11737c6a02ff8d
+      created: 1751340170962
+      modified: 1751340190981
+      isPrivate: false
+      sortKey: -1751340170962
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.0.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_58afbb86d15e6fa77d0d3ddf1b0f45274faa0bc0
+    created: 1751338334515
+    modified: 1751338334515
+environments:
+  name: Base Environment
+  meta:
+    id: env_58afbb86d15e6fa77d0d3ddf1b0f45274faa0bc0
+    created: 1751338334511
+    modified: 1751338334511
+    isPrivate: false
